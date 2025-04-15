@@ -30,6 +30,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!-- Header start-->
@@ -75,11 +81,112 @@
             </button>
           </div>
         </div>
+
+        <!-- hero section start -->
+        <div class="hero">
+          <h1>
+            Find Your Dream <br />
+            House With Us
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex aut
+            obcaecati sint doloremque repudiandae dolore dolorem in! Sunt,
+            corrupti.
+          </p>
+          <button>Find Your House</button>
+        </div>
+        <!-- hero section end -->
       </div>
     </header>
     <!-- Header end-->
 
+    <!-- Our House start -->
+    <div class="our-house">
+      <div class="container">
+        <h1>Most viewed</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et,
+          repellat?
+        </p>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/images/house-1.jpg" alt="House image">
+              <div class="house-desc">
+                <p>Ujung Berung Street, Bandung City, West Java</p>
+                <h2>Villa Home 1</h2>
+                <h4>Rp. 500.000.000</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/house-2.jpg" alt="House image">
+              <div class="house-desc">
+                <p>Ujung Berung Street, Bandung City, West Java</p>
+                <h2>Villa Home 2</h2>
+                <h4>Rp. 500.000.000</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/house-3.jpg" alt="House image">
+              <div class="house-desc">
+                <p>Ujung Berung Street, Bandung City, West Java</p>
+                <h2>Villa Home 3</h2>
+                <h4>Rp. 500.000.000</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/house-4.jpg" alt="House image">
+              <div class="house-desc">
+                <p>Ujung Berung Street, Bandung City, West Java</p>
+                <h2>Villa Home 4</h2>
+                <h4>Rp. 500.000.000</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/house-5.jpg" alt="House image">
+              <div class="house-desc">
+                <p>Ujung Berung Street, Bandung City, West Java</p>
+                <h2>Villa Home 5</h2>
+                <h4>Rp. 500.000.000</h4>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="btn-our-house">
+          <button>Lihat Selengkapnya</button>
+        </div>
+      </div>
+    </div>
+    <!-- Our House end -->
+
     <!-- js -->
     <script src="js/script.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          575: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
