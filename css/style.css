@@ -164,6 +164,8 @@ header {
   width: 100%;
   min-height: 100vh;
   padding: 100px 0;
+  display: flex;
+  align-items: center;
 }
 
 .our-house .container h1,
@@ -228,7 +230,68 @@ header {
 }
 /* our house end*/
 
+/* about us start */
+.about{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.about-box{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.about-box .box img{
+  width: 100%;
+  border-radius: 20px;
+}
+
+.about-box .box:nth-child(1){
+  position: relative;
+}
+
+.about-box .box:nth-child(1)::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #adff5b;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  z-index: -1;
+  transform: translate(10px, 10px);
+  opacity: 50%;
+}
+
+.about-box .box h1{
+  font-size: 50px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.about-box .box p{
+  margin-bottom: 10px;
+  line-height: 2;
+}
+
+/* about us end */
+
 /* screen */
+@media screen and (max-width: 1200px){
+  .about-box .box h1{
+    font-size: 40px;
+  }
+
+  .about-box .box p{
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .container {
     width: 90%;
@@ -236,6 +299,18 @@ header {
 
   .menu {
     gap: 20px;
+  }
+}
+
+@media screen and (max-width: 910px){
+  .about-box .box:nth-child(1)::before{
+    height: 95%;
+  }
+}
+
+@media screen and (max-width: 850px){
+  .about-box .box:nth-child(1)::before{
+    height: 80%;
   }
 }
 
@@ -309,11 +384,26 @@ header {
     gap: 50px;
   }
 
+  .about-box{
+    grid-template-columns: 1fr;
+  }
 
+  .about-box .box:nth-child(1)::before{
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 475px) {
   .hero h1{
     font-size: 40px;
+  }
+
+  .about-box .box h1{
+    font-size: 30px;
+    line-height: 1.5;
+  }
+
+  .about-box .box p{
+    font-size: 12px;
   }
 }
