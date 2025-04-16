@@ -320,6 +320,64 @@ header {
 }
 /* services end */
 
+/* Recoover start */
+.recover {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.recover-box {
+  width: 100%;
+  height: 40vh;
+  background-image: url(../assets/images/recover-img.jpg);
+  background-repeat: no-repeat;
+  background-position: -400px -400px;
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recover-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.recover-box .box {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-inline: 20px;
+}
+
+.recover-box .box h1,
+.recover-box .box p {
+  margin-bottom: 10px;
+}
+
+.recover-box .box div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.recover-box .box img {
+  width: 50px;
+  cursor: pointer;
+}
+/* Recoover end */
+
 /* screen */
 @media screen and (max-width: 1200px) {
   .about-box .box h1 {
@@ -472,5 +530,13 @@ header {
 
   .about-box .box p {
     font-size: 12px;
+  }
+
+  .recover-box .box h1 {
+    font-size: 24px;
+  }
+
+  .recover-box .box p {
+    font-size: 16px;
   }
 }
