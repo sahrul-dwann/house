@@ -378,6 +378,93 @@ header {
 }
 /* Recoover end */
 
+/* Feedback start */
+.feedback {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 0;
+  display: flex;
+  /* align-items: center; */
+}
+
+.feedback .container h1,
+.feedback .container h2,
+.feedback .container > p {
+  text-align: center;
+}
+
+.feedback .container h1,
+.feedback .container h2 {
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.feedback-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.feedback-box .box {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.feedback-box .box {
+  display: none;
+}
+
+.feedback-box .box:nth-child(1),
+.feedback-box .box:nth-child(2),
+.feedback-box .box:nth-child(3) {
+  display: inline-block;
+}
+
+.feedback-box .box > p {
+  padding: 20px;
+  line-height: 2;
+}
+
+.feedback-box .box .people {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.feedback-box .box .people .people-desc p {
+  font-weight: 600;
+  color: gray;
+}
+
+.feedback-box .box .people img {
+  width: 70px;
+  border-radius: 100%;
+}
+
+.feedback .load-more {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.feedback .load-more .load-more-btn {
+  padding: 10px 30px;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: #adff5b;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.feedback .load-more .load-more-btn:hover {
+  background-color: #87c22e;
+}
+
+.feedback .load-more .load-more-btn i {
+  margin-left: 10px;
+}
+/* Feedback end */
+
 /* screen */
 @media screen and (max-width: 1200px) {
   .about-box .box h1 {
