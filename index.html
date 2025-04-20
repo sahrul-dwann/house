@@ -36,8 +36,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
-  <body>
+  <body id="home">
     <!-- Header start-->
     <header>
       <div class="container">
@@ -51,23 +54,23 @@
             <h3>Overview</h3>
             <li>
               <i class="fa-solid fa-house"></i>
-              <a href="#">Home</a>
+              <a href="#home">Home</a>
             </li>
             <li>
               <i class="fa-solid fa-house-circle-check"></i>
-              <a href="#">Our House</a>
+              <a href="#our-house">Our House</a>
             </li>
             <li>
               <i class="fa-solid fa-address-card"></i>
-              <a href="#">About us</a>
+              <a href="#about">About us</a>
             </li>
             <li>
               <i class="fa-solid fa-gear"></i>
-              <a href="#">Services</a>
+              <a href="#services">Services</a>
             </li>
             <li>
               <i class="fa-solid fa-thumbs-up"></i>
-              <a href="#">Feedback</a>
+              <a href="#feedback">Feedback</a>
             </li>
           </ul>
           <div class="our-app">
@@ -101,10 +104,10 @@
     <!-- Header end-->
 
     <!-- Our House start -->
-    <div class="our-house">
+    <div class="our-house" id="our-house">
       <div class="container">
-        <h1>Most viewed</h1>
-        <p>
+        <h1 data-aos="fade-up" data-aos-duration="1000">Most viewed</h1>
+        <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et,
           repellat?
         </p>
@@ -162,9 +165,9 @@
     <!-- Our House end -->
 
     <!-- About Us Start -->
-    <div class="about">
+    <div class="about" id="about">
       <div class="container">
-        <div class="about-box">
+        <div class="about-box" data-aos="fade-up" data-aos-duration="1000">
           <div class="box">
             <img src="./assets/images/about-img.jpg" alt="about-img" />
           </div>
@@ -189,8 +192,8 @@
     <!-- About Us End -->
 
     <!-- Services start -->
-    <div class="services">
-      <div class="container">
+    <div class="services" id="services">
+      <div class="container" data-aos="fade-down-right" data-aos-duration="1000">
         <h1>Our Work In 3 Steps</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicingrull.</p>
         <div class="service-box">
@@ -245,11 +248,11 @@
     <!-- Recover App end -->
 
     <!-- Feedback start -->
-    <div class="feedback">
+    <div class="feedback" id="feedback">
       <div class="container">
-        <h2>Feedback</h2>
-        <h1>From Our Customer</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <h2 data-aos="fade-up" data-aos-duration="1000">Feedback</h2>
+        <h1 data-aos="fade-up" data-aos-duration="1000">From Our Customer</h1>
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         <div class="feedback-box">
           <div class="box">
             <div class="people">
@@ -403,6 +406,51 @@
     </div>
     <!-- Feedback end -->
 
+    <!-- footer start -->
+    <footer>
+      <div class="container">
+        <div class="footer-box">
+          <div class="box">
+            <h2>House</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <div class="footer-icon">
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-square-github"></i>
+            </div>
+          </div>
+
+          <div class="box">
+            <h3>Menu</h3>
+            <a href="#home">Home</a>
+            <a href="#our-house">Our Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#feedback">Feedback</a>
+          </div>
+
+          <div class="box">
+            <h3>Company</h3>
+            <a href="#">Blog</a>
+            <a href="#">Our Apps</a>
+            <a href="#">Brochure</a>
+          </div>
+
+          <div class="box">
+            <h3>Contack Us</h3>
+            <p><i class="fa-solid fa-envelope"></i> dwann1810@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> 0821-4498-2797</p>
+            <p><i class="fa-solid fa-location-dot"></i> Bogor, Jawa Barat</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- copyright -->
+    <div class="copyright">
+      <p>Created by Sahrul. | © 2025.</p>
+    </div>
+
     <!-- js -->
     <script src="js/script.js"></script>
 
@@ -429,6 +477,11 @@
           },
         },
       });
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
